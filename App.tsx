@@ -5,7 +5,8 @@ import { type CvData, TemplateName, WorkExperience, Education, Theme } from './t
 import { INITIAL_CV_DATA, LOCAL_STORAGE_KEY } from './constants';
 import { generateCoverLetter } from './services/geminiService';
 import { Button } from './components/Button';
-import { Icon } from './components/Icon';
+// FIX: Import IconProps to use for type assertion.
+import { Icon, type IconProps } from './components/Icon';
 import { Textarea } from './components/Textarea';
 import { OnboardingTour } from './components/OnboardingTour';
 import { CommandPalette } from './components/CommandPalette';
@@ -303,7 +304,8 @@ const App: React.FC = () => {
                 { id: 'download-pdf', title: 'Download as PDF', icon: 'download', action: handleDownloadPdf },
                 { id: 'download-docx', title: 'Download as DOCX', icon: 'file-word', action: handleDownloadDocx },
                 { id: 'import-data', title: 'Import LinkedIn Data', icon: 'clipboard', action: () => setImporterOpen(true) },
-                ...Object.values(TemplateName).map(t => ({ id: `template-${t}`, title: `Set Template: ${t}`, icon: 'palette', action: () => setActiveTemplate(t) }))
+                // FIX: Cast icon to IconProps['name'] to satisfy TypeScript
+                ...Object.values(TemplateName).map(t => ({ id: `template-${t}`, title: `Set Template: ${t}`, icon: 'palette' as IconProps['name'], action: () => setActiveTemplate(t) }))
             ]}
           />
       )}

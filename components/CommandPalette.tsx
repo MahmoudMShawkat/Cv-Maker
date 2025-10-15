@@ -74,7 +74,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ onClose, command
                   command.action();
                   onClose();
                 }}
-                className={`p-3 flex items-center gap-3 rounded-md cursor-pointer text-sm ${
+                className={`p-2 flex items-center gap-2 rounded-md cursor-pointer text-sm ${
                   index === activeIndex ? 'bg-[var(--accent-primary)] text-white' : 'hover:bg-black/10 dark:hover:bg-white/10'
                 }`}
               >

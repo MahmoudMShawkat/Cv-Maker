@@ -12,7 +12,7 @@ export const Section: React.FC<SectionProps> = ({ title, children }) => {
       boxShadow: 'var(--shadow-md)',
       border: '1px solid var(--border-primary)',
     }}>
-      <h2 className="text-xl font-semibold border-b pb-3 mb-4" style={{
+      <h2 className="text-xl font-semibold border-b pb-4 mb-4" style={{
         color: 'var(--text-primary)',
         borderColor: 'var(--border-primary)',
       }}>{title}</h2>

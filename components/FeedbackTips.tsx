@@ -118,7 +118,7 @@ export const FeedbackTips: React.FC<FeedbackTipsProps> = ({ cvData, jobDescripti
         boxShadow: 'var(--shadow-md)',
         border: '1px solid var(--border-primary)',
     }}>
-      <h2 className="text-xl font-semibold border-b pb-3 mb-4" style={{ color: 'var(--text-primary)', borderColor: 'var(--border-primary)' }}>ATS Analysis & Feedback</h2>
+      <h2 className="text-xl font-semibold border-b pb-4 mb-4" style={{ color: 'var(--text-primary)', borderColor: 'var(--border-primary)' }}>ATS Analysis & Feedback</h2>
       <div id="tour-step-4">
         <Button onClick={handleAnalyzeCv} disabled={!jobDescription} loading={loading} variant="ai">
             <Icon name="sparkle" />
@@ -146,13 +146,13 @@ export const FeedbackTips: React.FC<FeedbackTipsProps> = ({ cvData, jobDescripti
                   <h3 className="font-semibold text-[var(--text-primary)]">Missing Keywords</h3>
                   <div className="flex flex-wrap gap-2 mt-2">
                       {atsResult.missingKeywords.length > 0 ? atsResult.missingKeywords.map((kw, i) => (
-                          <span key={i} className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">{kw}</span>
+                          <span key={i} className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">{kw}</span>
                       )) : <p className="text-sm text-[var(--text-secondary)]">No critical keywords seem to be missing. Great job!</p>}
                   </div>
               </div>
                <div>
                   <h3 className="font-semibold text-[var(--text-primary)]">AI Improvement Tips</h3>
-                  <ul className="list-disc list-inside space-y-1 text-sm text-[var(--text-secondary)] mt-2">
+                  <ul className="list-disc list-inside space-y-2 text-sm text-[var(--text-secondary)] mt-2">
                       {atsResult.improvementTips.map((tip, i) => <li key={i}>{tip}</li>)}
                   </ul>
               </div>
@@ -162,7 +162,7 @@ export const FeedbackTips: React.FC<FeedbackTipsProps> = ({ cvData, jobDescripti
       {ruleBasedTips.length > 0 && !atsResult && (
           <div className="mt-4 pt-4 border-t" style={{borderColor: 'var(--border-primary)'}}>
                <h3 className="font-semibold text-[var(--text-primary)]">General CV Tips</h3>
-                <ul className="list-disc list-inside space-y-1 text-sm text-[var(--text-secondary)] mt-2">
+                <ul className="list-disc list-inside space-y-2 text-sm text-[var(--text-secondary)] mt-2">
                     {ruleBasedTips.map((tip, index) => <li key={index}>{tip}</li>)}
                 </ul>
           </div>

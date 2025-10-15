@@ -49,14 +49,12 @@
       .floating-label-group {
         position: relative;
       }
-      .floating-label-group .floating-input {
-        padding-top: 1.25rem;
-      }
+      /* The input's padding is now handled via Tailwind classes (pt-6 pb-2 px-4) */
       .floating-label-group .floating-label {
         position: absolute;
-        top: 0.875rem;
-        left: 0.75rem;
-        font-size: 0.875rem;
+        top: 1rem; /* 16px */
+        left: 1rem; /* 16px */
+        font-size: 1rem; /* Match input font size */
         color: var(--text-secondary);
         pointer-events: none;
         transform-origin: top left;
@@ -64,7 +62,7 @@
       }
       .floating-label-group .floating-input:focus + .floating-label,
       .floating-label-group .floating-input:not(:placeholder-shown) + .floating-label {
-        transform: translateY(-0.6rem) scale(0.85);
+        transform: translateY(-0.75rem) scale(0.75); /* Move up 12px, scale to 12px */
         color: var(--accent-primary);
       }
       

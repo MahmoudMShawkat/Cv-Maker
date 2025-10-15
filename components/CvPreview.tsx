@@ -117,6 +117,7 @@ export const CvPreview: React.FC<CvPreviewProps> = ({ cvData, template, previewR
   const isCreativeTemplate = template === TemplateName.Creative;
   const isClassicTemplate = template === TemplateName.Classic;
   const font = isClassicTemplate ? "'Merriweather', serif" : `'${cvData.fontFamily}', sans-serif`;
+  const linkColor = template === TemplateName.Modern ? '#FFFFFF' : cvData.accentColor;
 
 
   return (
@@ -138,7 +139,7 @@ export const CvPreview: React.FC<CvPreviewProps> = ({ cvData, template, previewR
           <p><a href={`mailto:${cvData.email}`} style={{color: 'inherit'}}>{cvData.email}</a></p>
           <p>{cvData.phone}</p>
           <p>{cvData.address}</p>
-          {cvData.linkedIn && <p><a href={cvData.linkedIn.startsWith('http') ? cvData.linkedIn : `//${cvData.linkedIn}`} target="_blank" rel="noopener noreferrer" style={{color: cvData.accentColor}}>LinkedIn</a></p>}
+          {cvData.linkedIn && <p><a href={cvData.linkedIn.startsWith('http') ? cvData.linkedIn : `//${cvData.linkedIn}`} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80" style={{color: linkColor}}>LinkedIn</a></p>}
         </div>
       </header>
 

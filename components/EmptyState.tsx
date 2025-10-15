@@ -18,7 +18,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({ title, message, children
         </svg>
       </div>
       <h3 className="text-lg font-bold text-[var(--text-primary)]">{title}</h3>
-      <p className="text-sm text-[var(--text-secondary)] mt-1 mb-4 max-w-xs mx-auto">{message}</p>
+      <p className="text-sm text-[var(--text-secondary)] mt-2 mb-4 max-w-xs mx-auto">{message}</p>
       {children}
     </div>
   );

@@ -53,25 +53,25 @@ type TemplateStyles = {
 
 export const TEMPLATES: TemplateStyles = {
   [TemplateName.Modern]: {
-    preview: 'font-sans bg-white text-slate-800 p-8 shadow-lg',
-    header: 'flex justify-between items-center pb-6 border-b-2 border-[--accent-color]',
-    name: 'text-4xl font-bold text-slate-900',
-    contactInfo: 'text-right text-sm text-slate-600',
-    sectionTitle: 'text-xl font-bold text-[--accent-color] mt-6 mb-2 border-b border-slate-300 pb-1',
+    preview: 'font-sans bg-white text-slate-800 p-8 shadow-lg rounded-lg',
+    header: 'p-6 bg-[--accent-color] text-white flex justify-between items-center rounded-t-lg -m-8 mb-0',
+    name: 'text-4xl font-bold text-white',
+    contactInfo: 'text-right text-sm text-white/90',
+    sectionTitle: 'text-xl font-bold text-[--accent-color] mt-6 mb-2 border-b border-slate-300 pb-2',
     content: 'text-sm leading-relaxed',
     separator: 'my-2'
   },
   [TemplateName.Classic]: {
-    preview: 'font-serif bg-white text-gray-900 p-10 shadow-md',
-    header: 'text-center pb-5 border-b-2 border-gray-400',
+    preview: 'font-serif bg-white text-gray-900 p-8 shadow-md',
+    header: 'text-center pb-6 border-b-4 border-double border-gray-300',
     name: 'text-5xl font-normal tracking-wider text-[--accent-color]',
     contactInfo: 'text-center text-xs text-gray-600 mt-2',
-    sectionTitle: 'text-lg font-semibold uppercase tracking-widest text-gray-700 mt-8 mb-3 border-b border-gray-300 pb-1',
+    sectionTitle: 'text-lg font-semibold uppercase tracking-widest text-[--accent-color] mt-8 mb-4 border-b border-gray-300 pb-2',
     content: 'text-base leading-snug',
-    separator: 'my-3'
+    separator: 'my-4'
   },
   [TemplateName.Creative]: {
-    preview: 'font-sans bg-slate-800 text-white p-8 shadow-xl relative',
+    preview: 'font-sans bg-slate-800 text-white p-8 shadow-xl relative border-l-4 border-[--accent-color]',
     header: 'text-left pb-4',
     name: 'text-4xl font-extrabold text-[--accent-color]',
     contactInfo: 'text-left text-sm text-slate-300 pt-2',
@@ -83,7 +83,7 @@ export const TEMPLATES: TemplateStyles = {
 
 export const DENSITY_STYLES: { [key in LayoutDensity]: { section: string, item: string } } = {
   Compact: {
-    section: 'mt-3',
+    section: 'mt-2',
     item: 'mb-2'
   },
   Standard: {

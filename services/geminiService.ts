@@ -24,6 +24,35 @@ const generateContent = async (prompt: string) => {
     }
 };
 
+export const rephraseExperienceDescription = async (jobTitle: string, currentDescription: string): Promise<string> => {
+  const prompt = `You are a professional resume writer. Rephrase the following bullet points for the job title "${jobTitle}" to be more impactful and action-oriented. 
+  Preserve the core information but improve the wording, use stronger action verbs, and ensure a professional tone. 
+  Do not add any new information. Maintain the original number of bullet points.
+  Format the output as bullet points, each starting with '•'.
+
+  Current Description:
+  ---
+  ${currentDescription}
+  ---
+
+  Rephrased Description:`;
+
+  return generateContent(prompt);
+};
+
+export const rephraseSummary = async (currentSummary: string): Promise<string> => {
+  const prompt = `You are a professional resume writer. Rephrase the following professional summary to be more impactful and action-oriented. Keep it concise (around 3-4 sentences) and professional. Do not add any new information, only improve the wording and flow of the existing text.
+
+  Current Summary:
+  ---
+  ${currentSummary}
+  ---
+
+  Rephrased Summary:`;
+
+  return generateContent(prompt);
+};
+
 export const generateSummary = async (cvData: CvData, jobDescription: string): Promise<string> => {
   const prompt = `You are a professional resume writer. Using the provided CV data and the target job description, generate a compelling, 3-4 sentence professional summary. The summary should be written in the first person and highlight the candidate's most relevant skills and experiences that match the job requirements.
 

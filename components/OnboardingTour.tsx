@@ -63,18 +63,18 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({ onClose }) => {
 
   const tooltipStyle: React.CSSProperties = {
     position: 'fixed',
-    top: targetRect.bottom + 10,
+    top: targetRect.bottom + 8,
     left: targetRect.left,
     width: 300,
     zIndex: 10001,
   };
   
   if (currentStep.position === 'top') {
-    tooltipStyle.top = targetRect.top - 10;
+    tooltipStyle.top = targetRect.top - 8;
     tooltipStyle.transform = 'translateY(-100%)';
   }
   if (currentStep.position === 'left') {
-    tooltipStyle.left = targetRect.left - 10;
+    tooltipStyle.left = targetRect.left - 8;
     tooltipStyle.top = targetRect.top;
     tooltipStyle.transform = 'translateX(-100%)';
   }
@@ -102,10 +102,10 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({ onClose }) => {
       <div 
         className="fixed border-2 border-dashed border-white rounded-lg transition-all duration-300" 
         style={{ 
-            top: targetRect.top - 5, 
-            left: targetRect.left - 5, 
-            width: targetRect.width + 10, 
-            height: targetRect.height + 10,
+            top: targetRect.top - 4, 
+            left: targetRect.left - 4, 
+            width: targetRect.width + 8, 
+            height: targetRect.height + 8,
         }}
       ></div>
 
