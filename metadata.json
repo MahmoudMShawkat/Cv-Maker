@@ -1,0 +1,5 @@
+{
+  "name": "AI CV Maker",
+  "description": "A web-based CV Maker application that empowers users to build a professional and comprehensive CV with the help of AI-powered suggestions. Features a live preview, multiple templates, and PDF download functionality.",
+  "requestFramePermissions": []
+}
